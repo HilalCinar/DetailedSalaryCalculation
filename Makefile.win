@@ -26,3 +26,4 @@ $(BIN): $(OBJ)
 
 main.o: main.c
 	$(CC) -c main.c -o main.o $(CFLAGS)
+
