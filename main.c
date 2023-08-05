@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 
+
 int main() {
 	
 /*	Detayli Maas hesaplama programi */ 
@@ -103,7 +104,7 @@ int main() {
 											
 											if(scanf("%lf", &MesaiSaatiNormal) != 1) {
 												
-												printf("Mesai saati degeri yalnýzca sayýsal degerlerden oluþmalýdýr!");
+												printf("Mesai saati degeri yalnÄ±zca sayÄ±sal degerlerden oluÅŸmalÄ±dÄ±r!");
 												
 											} else {
 												
@@ -117,7 +118,7 @@ int main() {
 													
 													if(scanf("%lf", &MesaiSaatiResmi) != 1) {
 														
-														printf("Mesai saati degeri yalnýzca sayýsal degerlerden oluþmalýdýr!");
+														printf("Mesai saati degeri yalnÄ±zca sayÄ±sal degerlerden oluÅŸmalÄ±dÄ±r!");
 														
 													} else {
 														
@@ -137,7 +138,7 @@ int main() {
 															
 															if (scanf("%d", &eksikGelinenGun) != 1) {
 																
-																printf("Eksik gelinen gun degeri yalnýzca sayýsal degerlerden oluþmalýdýr!");
+																printf("Eksik gelinen gun degeri yalnÄ±zca sayÄ±sal degerlerden oluÅŸmalÄ±dÄ±r!");
 																
 															} else {
 																
@@ -151,7 +152,7 @@ int main() {
 																	
 																	if(scanf("%lf", &eksikGelinenSaat) != 1) {
 																		
-																		printf("Eksik gelinen saat degeri yalnýzca sayýsal degerlerden oluþmalýdýr!");
+																		printf("Eksik gelinen saat degeri yalnÄ±zca sayÄ±sal degerlerden oluÅŸmalÄ±dÄ±r!");
 																		
 																	} else {
 																		
@@ -184,13 +185,13 @@ int main() {
 															}
 														} else {
 															
-															printf("Matematiksel olarak 1 aylýk mesai degeri mantikli degil!");
+															printf("Matematiksel olarak 1 aylÄ±k mesai degeri mantikli degil!");
 															
 														}
 													}
 												} else {
 													
-													printf("Matematiksel olarak 1 aylýk mesai degeri mantikli degil!");
+													printf("Matematiksel olarak 1 aylÄ±k mesai degeri mantikli degil!");
 													
 												}
 											}
@@ -297,7 +298,7 @@ int main() {
 													
 														if (scanf("%lf", &MesaiSaatiNormal) != 1) {
 														
-															printf("Mesai saati degeri yalnýzca sayýsal degerlerden oluþmalýdýr!");
+															printf("Mesai saati degeri yalnÄ±zca sayÄ±sal degerlerden oluÅŸmalÄ±dÄ±r!");
 														
 														} else {
 														
@@ -311,7 +312,7 @@ int main() {
 															
 																if (scanf("%lf", &MesaiSaatiResmi) != 1 ) {
 																
-																	printf("Mesai saati degeri yalnýzca sayýsal degerlerden oluþmalýdýr!");
+																	printf("Mesai saati degeri yalnÄ±zca sayÄ±sal degerlerden oluÅŸmalÄ±dÄ±r!");
 																
 																} else {
 																
@@ -325,7 +326,7 @@ int main() {
 																	
 																		if(scanf("%lf", &MesaiSaatiTatil) != 1) {
 																		
-																			printf("Mesai saati degeri yalnýzca sayýsal degerlerden oluþmalýdýr!");
+																			printf("Mesai saati degeri yalnÄ±zca sayÄ±sal degerlerden oluÅŸmalÄ±dÄ±r!");
 																		
 																		} else {
 																		
@@ -346,7 +347,7 @@ int main() {
 																			
 																				if(scanf("%d", &eksikGelinenGun) != 1) {
 																				
-																					printf("Eksik gelinen gun degeri yalnýzca sayýsal degerlerden oluþmalýdýr!");
+																					printf("Eksik gelinen gun degeri yalnÄ±zca sayÄ±sal degerlerden oluÅŸmalÄ±dÄ±r!");
 																				
 																				} else {
 																				
@@ -360,7 +361,7 @@ int main() {
 																					
 																						if(scanf("%lf", &eksikGelinenSaat) != 1) {
 																						
-																							printf("Eksik gelinen saat degeri yalnýzca sayýsal degerlerden oluþmalýdýr!");
+																							printf("Eksik gelinen saat degeri yalnÄ±zca sayÄ±sal degerlerden oluÅŸmalÄ±dÄ±r!");
 																						
 																						} else {
 																						
@@ -393,19 +394,19 @@ int main() {
 																				}
 																			} else {
 																			
-																				printf("Matematiksel olarak 1 aylýk mesai degeri mantikli degil!");
+																				printf("Matematiksel olarak 1 aylÄ±k mesai degeri mantikli degil!");
 																			
 																			}
 																		}
 																	} else {
 																	
-																		printf("Matematiksel olarak 1 aylýk mesai degeri mantikli degil!");
+																		printf("Matematiksel olarak 1 aylÄ±k mesai degeri mantikli degil!");
 																	
 																	}
 																}
 															} else {
 															
-																printf("Matematiksel olarak 1 aylýk mesai degeri mantikli degil!");
+																printf("Matematiksel olarak 1 aylÄ±k mesai degeri mantikli degil!");
 															
 															}
 														}
