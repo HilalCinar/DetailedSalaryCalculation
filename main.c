@@ -1,11 +1,13 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+#include <stddef.h>
+
+
 
 
 int main() {
-	
-/*	Detayli Maas hesaplama programi */ 
-	
+		
 	int ayKacGun;
 
 	printf("Bu ay kac gun: ");
@@ -420,32 +422,36 @@ int main() {
 					}
 				} else if (haftalikTatilSayisi > 1) {
 					
-					char diziTatilGunu[7][50];
-					int k;
+					char diziTatilGunu[haftalikTatilSayisi][50];
+					int k, i, harfMi;
 					
 					for(k=0; k<haftalikTatilSayisi; k++) {
 						
 						printf("Haftanin %d. tatil gunu: ", k+1);
+						scanf("%s", diziTatilGunu[k]);
 						
-						if(scanf(" %s", &diziTatilGunu[k]) != 1) {
-						
-							printf("Tatil gunu sadece harflerden olusmmalidir!");
-						
-						} else {
-						
-							int i = 0;
+						for(i=0; i<strlen(diziTatilGunu[k]); i++) {
 							
-   							while (tatilGunu[i]) {
-   							
-        						tatilGunu[i] = tolower(tatilGunu[i]);
-        						
-       							i++;
-       							
-   							}
+							if(!isalpha(diziTatilGunu[k][i])) { 
+								
+								harfMi = 0;
+								printf("Tatil gunu sadece harflerden olusmalidir!\n");
+								k--;
+								break;
+								
+							} else {
+								
+								int m;
+								for(m=0; m<strlen(diziTatilGunu[k]); m++) {	
+									
+									diziTatilGunu[k][m] = tolower(diziTatilGunu[k][m]);
+										
+								}
+							} 					
 						}
-					}
-				} 
-			}
+					} 
+				}
+			}	
 		} else {
 			
 			printf("Gecersiz ay degeri girisi!");
@@ -458,3 +464,4 @@ int main() {
 	return 0;
 	
 }
+ 
