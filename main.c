@@ -9,6 +9,7 @@
 
 int main() {
 		
+	
 	int ayKacGun;
 
 	printf("Bu ay kac gun: ");
@@ -106,7 +107,7 @@ int main() {
 											
 											if(scanf("%lf", &MesaiSaatiNormal) != 1) {
 												
-												printf("Mesai saati degeri yalnÄ±zca sayÄ±sal degerlerden oluÅŸmalÄ±dÄ±r!");
+												printf("Mesai saati degeri yalnýzca sayýsal degerlerden oluþmalýdýr!");
 												
 											} else {
 												
@@ -120,7 +121,7 @@ int main() {
 													
 													if(scanf("%lf", &MesaiSaatiResmi) != 1) {
 														
-														printf("Mesai saati degeri yalnÄ±zca sayÄ±sal degerlerden oluÅŸmalÄ±dÄ±r!");
+														printf("Mesai saati degeri yalnýzca sayýsal degerlerden oluþmalýdýr!");
 														
 													} else {
 														
@@ -140,7 +141,7 @@ int main() {
 															
 															if (scanf("%d", &eksikGelinenGun) != 1) {
 																
-																printf("Eksik gelinen gun degeri yalnÄ±zca sayÄ±sal degerlerden oluÅŸmalÄ±dÄ±r!");
+																printf("Eksik gelinen gun degeri yalnýzca sayýsal degerlerden oluþmalýdýr!");
 																
 															} else {
 																
@@ -154,7 +155,7 @@ int main() {
 																	
 																	if(scanf("%lf", &eksikGelinenSaat) != 1) {
 																		
-																		printf("Eksik gelinen saat degeri yalnÄ±zca sayÄ±sal degerlerden oluÅŸmalÄ±dÄ±r!");
+																		printf("Eksik gelinen saat degeri yalnýzca sayýsal degerlerden oluþmalýdýr!");
 																		
 																	} else {
 																		
@@ -187,13 +188,13 @@ int main() {
 															}
 														} else {
 															
-															printf("Matematiksel olarak 1 aylÄ±k mesai degeri mantikli degil!");
+															printf("Matematiksel olarak 1 aylýk mesai degeri mantikli degil!");
 															
 														}
 													}
 												} else {
 													
-													printf("Matematiksel olarak 1 aylÄ±k mesai degeri mantikli degil!");
+													printf("Matematiksel olarak 1 aylýk mesai degeri mantikli degil!");
 													
 												}
 											}
@@ -300,7 +301,7 @@ int main() {
 													
 														if (scanf("%lf", &MesaiSaatiNormal) != 1) {
 														
-															printf("Mesai saati degeri yalnÄ±zca sayÄ±sal degerlerden oluÅŸmalÄ±dÄ±r!");
+															printf("Mesai saati degeri yalnýzca sayýsal degerlerden oluþmalýdýr!");
 														
 														} else {
 														
@@ -314,7 +315,7 @@ int main() {
 															
 																if (scanf("%lf", &MesaiSaatiResmi) != 1 ) {
 																
-																	printf("Mesai saati degeri yalnÄ±zca sayÄ±sal degerlerden oluÅŸmalÄ±dÄ±r!");
+																	printf("Mesai saati degeri yalnýzca sayýsal degerlerden oluþmalýdýr!");
 																
 																} else {
 																
@@ -328,7 +329,7 @@ int main() {
 																	
 																		if(scanf("%lf", &MesaiSaatiTatil) != 1) {
 																		
-																			printf("Mesai saati degeri yalnÄ±zca sayÄ±sal degerlerden oluÅŸmalÄ±dÄ±r!");
+																			printf("Mesai saati degeri yalnýzca sayýsal degerlerden oluþmalýdýr!");
 																		
 																		} else {
 																		
@@ -349,7 +350,7 @@ int main() {
 																			
 																				if(scanf("%d", &eksikGelinenGun) != 1) {
 																				
-																					printf("Eksik gelinen gun degeri yalnÄ±zca sayÄ±sal degerlerden oluÅŸmalÄ±dÄ±r!");
+																					printf("Eksik gelinen gun degeri yalnýzca sayýsal degerlerden oluþmalýdýr!");
 																				
 																				} else {
 																				
@@ -363,7 +364,7 @@ int main() {
 																					
 																						if(scanf("%lf", &eksikGelinenSaat) != 1) {
 																						
-																							printf("Eksik gelinen saat degeri yalnÄ±zca sayÄ±sal degerlerden oluÅŸmalÄ±dÄ±r!");
+																							printf("Eksik gelinen saat degeri yalnýzca sayýsal degerlerden oluþmalýdýr!");
 																						
 																						} else {
 																						
@@ -396,19 +397,19 @@ int main() {
 																				}
 																			} else {
 																			
-																				printf("Matematiksel olarak 1 aylÄ±k mesai degeri mantikli degil!");
+																				printf("Matematiksel olarak 1 aylýk mesai degeri mantikli degil!");
 																			
 																			}
 																		}
 																	} else {
 																	
-																		printf("Matematiksel olarak 1 aylÄ±k mesai degeri mantikli degil!");
+																		printf("Matematiksel olarak 1 aylýk mesai degeri mantikli degil!");
 																	
 																	}
 																}
 															} else {
 															
-																printf("Matematiksel olarak 1 aylÄ±k mesai degeri mantikli degil!");
+																printf("Matematiksel olarak 1 aylýk mesai degeri mantikli degil!");
 															
 															}
 														}
@@ -443,6 +444,7 @@ int main() {
 							} else {
 								
 								int m;
+								
 								for(m=0; m<strlen(diziTatilGunu[k]); m++) {	
 									
 									diziTatilGunu[k][m] = tolower(diziTatilGunu[k][m]);
@@ -451,6 +453,132 @@ int main() {
 							} 					
 						}
 					} 
+					
+					double katNormal;
+   						
+   						printf("Normal calisma saati disi calisma icin - 1 saat mesai ucreti normal mesai ucretinin kac kati:  ");
+					
+					if(scanf("%lf", &katNormal) != 1) {
+						
+							printf("Gecersiz kat degeri girisi!");
+						
+					} else {
+						
+						if(katNormal <= 0) {
+							
+							printf("Kat degeri negatif ya da 0 olamaz!");
+							
+						} else if (katNormal <= 20) {
+							
+							double katResmi;
+							
+							printf("Resmi tatil gunu icin - 1 saat mesai ucreti normal mesai ucretinin kac kati:  ");
+							
+							if(scanf("%lf", &katResmi) != 1) {	
+							
+								printf("Gecersiz kat degeri girisi!");	
+							
+							} else {
+								
+								if (katResmi <= 0) {
+							
+									printf("Kat degeri negatif ya da 0 olamaz!");
+							
+								} else if (katResmi <= 20) {
+										
+									int a, b;
+									double katTatilDizi[haftalikTatilSayisi];
+										
+									for(a=0; a<haftalikTatilSayisi; a++){
+										
+										printf("%s gunu icin - 1 saat mesai ucreti normal mesai ucretinin kac kati:  \n", diziTatilGunu[a]);
+											
+										if(scanf("%lf", &katTatilDizi[a]) != 1) {
+												
+											printf("Gecersiz kat degeri girisi!");
+												
+										} else {
+								
+											if (katTatilDizi[a] <= 0) {
+								
+												printf("Kat degeri negatif ya da 0 olamaz!");
+								
+											} else if (katTatilDizi[a] <= 20) {
+												
+												double NetMaas;
+							
+												printf("Net Maasiniz; ");
+							
+												if (scanf("%lf", &NetMaas) != 1) {
+											
+													printf("Gecersiz maas girisi!");
+								
+												} else {
+													
+													if (NetMaas < 0) {
+														
+														printf("Maas degeri negatif olamaz!");
+														
+													} else if (NetMaas == 0) {
+														
+														printf("Maas degeri 0 olamaz!");
+														
+													} else {
+														
+														double gunlukMaasDegeri = NetMaas / 30;
+														double saatlikMaasDegeri = NetMaas / 225;
+										
+														double MesaiSaatiNormal, MesaiSaatiResmi, MesaiSaatiTatil;
+													
+														printf("Normal gun yapilan mesai saati sayisi: ");
+													
+														if (scanf("%lf", &MesaiSaatiNormal) != 1) {
+														
+															printf("Mesai saati degeri yalnýzca sayýsal degerlerden oluþmalýdýr!");
+														
+														} else {
+															
+															if(MesaiSaatiNormal < 0) {
+															
+																printf("Mesai saati negatif olamaz!");
+															
+															} else if (MesaiSaatiNormal >= 0 && MesaiSaatiNormal <= 480) {
+															
+																printf("Resmi tatil gunu yapilan mesai saati sayisi: ");
+															
+																if (scanf("%lf", &MesaiSaatiResmi) != 1 ) {
+																
+																	printf("Mesai saati degeri yalnýzca sayýsal degerlerden oluþmalýdýr!");
+																
+																} else {
+																
+																	if (MesaiSaatiResmi < 0) {
+																	
+																		printf("Mesai saati negatif olamaz!");
+																	
+																	} else if (MesaiSaatiResmi >= 0 && MesaiSaatiResmi <= 850) {
+																		
+																		
+																		
+																		
+																	}
+																}
+															}
+														}	
+													}
+												}
+											}
+										}	
+									}
+									
+									
+									
+									 
+	
+								}
+							}
+						}
+					}
 				}
 			}	
 		} else {
@@ -463,6 +591,5 @@ int main() {
 
 	
 	return 0;
-	
 }
  
