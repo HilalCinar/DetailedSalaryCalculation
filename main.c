@@ -442,7 +442,7 @@ int main() {
 								break;
 								
 							} else {
-								
+								 
 								int m;
 								
 								for(m=0; m<strlen(diziTatilGunu[k]); m++) {	
@@ -488,93 +488,160 @@ int main() {
 										
 									int a, b;
 									double katTatilDizi[haftalikTatilSayisi];
+									int kontrol;
 										
 									for(a=0; a<haftalikTatilSayisi; a++){
 										
-										printf("%s gunu icin - 1 saat mesai ucreti normal mesai ucretinin kac kati:  \n", diziTatilGunu[a]);
+										printf("%s gunu icin - 1 saat mesai ucreti normal mesai ucretinin kac kati: ", diziTatilGunu[a]);
 											
-										if(scanf("%lf", &katTatilDizi[a]) != 1) {
-												
-											printf("Gecersiz kat degeri girisi!");
-												
-										} else {
-								
-											if (katTatilDizi[a] <= 0) {
-								
-												printf("Kat degeri negatif ya da 0 olamaz!");
-								
-											} else if (katTatilDizi[a] <= 20) {
-												
-												double NetMaas;
-							
-												printf("Net Maasiniz; ");
-							
-												if (scanf("%lf", &NetMaas) != 1) {
+										kontrol = scanf("%lf", &katTatilDizi[a]);	
 											
-													printf("Gecersiz maas girisi!");
-								
-												} else {
-													
-													if (NetMaas < 0) {
-														
-														printf("Maas degeri negatif olamaz!");
-														
-													} else if (NetMaas == 0) {
-														
-														printf("Maas degeri 0 olamaz!");
-														
-													} else {
-														
-														double gunlukMaasDegeri = NetMaas / 30;
-														double saatlikMaasDegeri = NetMaas / 225;
-										
-														double MesaiSaatiNormal, MesaiSaatiResmi, MesaiSaatiTatil;
-													
-														printf("Normal gun yapilan mesai saati sayisi: ");
-													
-														if (scanf("%lf", &MesaiSaatiNormal) != 1) {
-														
-															printf("Mesai saati degeri yalnýzca sayýsal degerlerden oluþmalýdýr!");
-														
-														} else {
-															
-															if(MesaiSaatiNormal < 0) {
-															
-																printf("Mesai saati negatif olamaz!");
-															
-															} else if (MesaiSaatiNormal >= 0 && MesaiSaatiNormal <= 480) {
-															
-																printf("Resmi tatil gunu yapilan mesai saati sayisi: ");
-															
-																if (scanf("%lf", &MesaiSaatiResmi) != 1 ) {
-																
-																	printf("Mesai saati degeri yalnýzca sayýsal degerlerden oluþmalýdýr!");
-																
-																} else {
-																
-																	if (MesaiSaatiResmi < 0) {
-																	
-																		printf("Mesai saati negatif olamaz!");
-																	
-																	} else if (MesaiSaatiResmi >= 0 && MesaiSaatiResmi <= 850) {
-																		
-																		
-																		
-																		
-																	}
-																}
-															}
-														}	
-													}
-												}
-											}
-										}	
+										if(kontrol != 1 || katTatilDizi[a] <= 0 || katTatilDizi[a] > 20) {
+												
+											printf("Gecersiz kat degeri girisi!\n");
+											break;
+										} 
 									}
 									
-									
-									
-									 
+									if (kontrol == 1 || katTatilDizi[a] <= 20) {
+										
+										double NetMaas;
+							
+										printf("Net Maasiniz; ");
+							
+										if (scanf("%lf", &NetMaas) != 1) {
+											
+											printf("Gecersiz maas girisi!");
+								
+										} else {
+													
+											if (NetMaas < 0) {
+														
+												printf("Maas degeri negatif olamaz!");
+														
+											} else if (NetMaas == 0) {
+														
+												printf("Maas degeri 0 olamaz!");
+														
+											} else {
+														
+												double gunlukMaasDegeri = NetMaas / 30;
+												double saatlikMaasDegeri = NetMaas / 225;
 	
+												double MesaiSaatiNormal, MesaiSaatiResmi;
+														
+												printf("Normal gun yapilan mesai saati sayisi: ");
+													
+												if (scanf("%lf", &MesaiSaatiNormal) != 1) {
+														
+													printf("Mesai saati degeri yalnýzca sayýsal degerlerden oluþmalýdýr!");
+														
+												} else {
+														
+													if(MesaiSaatiNormal < 0) {
+															
+														printf("Mesai saati negatif olamaz!");
+															
+													} else if (MesaiSaatiNormal >= 0 && MesaiSaatiNormal <= 480) {
+															
+														printf("Resmi tatil gunu yapilan mesai saati sayisi: ");
+															
+														if (scanf("%lf", &MesaiSaatiResmi) != 1 ) {
+																
+															printf("Mesai saati degeri yalnýzca sayýsal degerlerden oluþmalýdýr!");
+																
+														} else {
+																
+															if (MesaiSaatiResmi < 0) {
+																	
+																printf("Mesai saati negatif olamaz!");
+																	
+															} else if (MesaiSaatiResmi >= 0 && MesaiSaatiResmi <= 850) {
+																		
+																int y;
+																double MesaiSaatiTatil[haftalikTatilSayisi];
+																int kontrol2;
+																		
+																for (y=0; y<haftalikTatilSayisi; y++) {
+																			
+																	printf("%s tatil gunu yapilan mesai saati sayisi: ", diziTatilGunu[y]);
+																	kontrol2 = scanf("%lf", &MesaiSaatiTatil[y]);	
+											
+																	if(kontrol2 != 1 || MesaiSaatiTatil[y] < 0 || MesaiSaatiTatil[y] > 24 * haftalikTatilSayisi) {
+												
+																		printf("Gecersiz mesai degeri girisi!\n");
+																		break;
+																				
+																	} 
+																}
+																		
+																if(kontrol2 == 1) {
+																			
+																	int z;
+																	double tatilGunMesaiKazanc = 0;
+																	double toplam ;
+																	double normalGunMesaiKazanc = katNormal * MesaiSaatiNormal * saatlikMaasDegeri;	
+																	double resmiGunMesaiKazanc = katResmi * MesaiSaatiResmi * saatlikMaasDegeri;
+																			
+																	for(z=0; z<haftalikTatilSayisi; z++) {
+																				
+																		toplam = katTatilDizi[z] * MesaiSaatiTatil[z];
+																		tatilGunMesaiKazanc = tatilGunMesaiKazanc + toplam;	
+																	}	
+																	
+																	tatilGunMesaiKazanc = tatilGunMesaiKazanc * saatlikMaasDegeri;
+																	printf("%lf", tatilGunMesaiKazanc);
+																	int eksikGelinenGun;
+																	double eksikGelinenSaat;
+															
+																	printf("Ise gelinmeyen gun sayisi: ");
+																			
+																	if(scanf("%d", &eksikGelinenGun) != 1) {
+																				
+																		printf("Eksik gelinen gun degeri yalnýzca sayýsal degerlerden oluþmalýdýr!");
+																				
+																	} else {
+																				
+																		if(eksikGelinenGun < 0) {
+																					
+																			printf("Eksik gelinen gun degeri negatif olamaz!");
+																					
+																		} else if (eksikGelinenGun >= 0 && eksikGelinenGun <= ayKacGun) {
+																					
+																			printf("Ise gelinmeyen saat sayisi: ");
+																					
+																			if(scanf("%lf", &eksikGelinenSaat) != 1) {
+																						
+																				printf("Eksik gelinen saat degeri yalnýzca sayýsal degerlerden oluþmalýdýr!");
+																						
+																			} else {
+																						
+																				if (eksikGelinenSaat < 0) {
+																							
+																					printf("Eksik gelinen saat degeri negatif olamaz!");
+																							
+																				} else if (eksikGelinenSaat >= 0 && eksikGelinenSaat <= ayKacGun * 24) {
+																							
+																					double MaastanDusulecekGunParasi = eksikGelinenGun * gunlukMaasDegeri;
+																					double MaastanDusulecekSaatParasi = eksikGelinenSaat * saatlikMaasDegeri;
+																						
+																					double alinacakToplamMaas;
+																								
+																					alinacakToplamMaas = (gunlukMaasDegeri * ayKacGun) + normalGunMesaiKazanc + resmiGunMesaiKazanc + tatilGunMesaiKazanc - MaastanDusulecekGunParasi - MaastanDusulecekSaatParasi;
+																					printf("Alacaginiz Maas: %lf", alinacakToplamMaas);
+																								
+																				} 
+																			}
+																		} 
+																	}
+																} 
+															}
+														} 
+													}
+												} 
+											}		
+										}
+									}
 								}
 							}
 						}
@@ -591,5 +658,7 @@ int main() {
 
 	
 	return 0;
+	
+	
 }
  
